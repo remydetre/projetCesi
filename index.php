@@ -1,17 +1,18 @@
 <?php
-	
+
 
 	function saveAsJson($data) {
 		file_put_contents("data.json", json_encode($data));
 	}
 
 	function readJson($filename) {
-		$content = "{}";
+		$content = [];
 		if (file_exists($filename)) {
 			$content = file_get_contents($filename);
+            $content = json_decode($content);
 		}
 
-		return json_decode($content);
+		return $content;
 	}
 
 	function getFormData() {
@@ -49,7 +50,7 @@
 		break;
 		case '':
 		default:
-			echo 
+			echo
 <<<EOT
 <a href="index.php?action=form">Ajouter une question</a><br />
 <table>
