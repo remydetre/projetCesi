@@ -1,5 +1,5 @@
 <?php
-include 'function.php';
+include 'traitement.php';
 ?>
 
 <!DOCTYPE html>
