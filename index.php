@@ -34,8 +34,11 @@ include 'traitement.php';
 	<tbody>
 EOT;
 
+			$val = 0;
 			foreach ($dataJson as $row) {
-				echo "<tr><td>" . $row->question . "</td><td></td></tr>";
+
+				echo "<tr><td>" . $row->question . "</td><td><a href='supprimer.php?tab=$val'>Supprimer</a></td></tr>";
+				$val++;
 			}
 			break;
 		}

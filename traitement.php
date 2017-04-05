@@ -29,4 +29,11 @@ saveAsJson($dataJson);
 header("Location:index.php");
 }
 
+function supprData($val){
+    $dataJson = readJson("data.json");
+    unset($dataJson[$val]);
+    var_dump(reset($dataJson));
+    saveAsJson(array(reset($dataJson)));
+}
+
 ?>
