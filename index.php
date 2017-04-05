@@ -51,7 +51,7 @@
 		default:
 			echo 
 <<<EOT
-<a href="?action=form">Ajouter une question</a><br />
+<a href="index.php?action=form">Ajouter une question</a><br />
 <table>
 	<thead>
 		<tr>
